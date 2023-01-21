@@ -224,6 +224,9 @@ section{
     .home{
         height: auto;
     }
+    header.sticky{
+        padding: 10px 9%;
+    }
 }
 
 @media (max-width: 910px){
@@ -238,7 +241,6 @@ section{
         --f2-font: 1.5rem;
         --p-font: 1rem;
     }
-
     #menu-icon{
         display: block;
     }
