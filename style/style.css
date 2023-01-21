@@ -18,11 +18,12 @@
 }
 
 body{
-    background-color: var(--bg-color);
+    background-color:var(--bg-color);
     color: var(--text-color);
 }
 
 /* Menu bar */
+
 header{
     position: fixed;
     width: 100%;
@@ -35,6 +36,11 @@ header{
     background: transparent;
     justify-content: space-between;
     transition: all .45s ease;
+}
+
+header.sticky{
+    background-color: #0c2c1f;
+    padding: 10px 15%;
 }
 
 .logo{
@@ -185,7 +191,7 @@ section{
     height: 55px;
     width: 55px;
     padding: 10px;
-    background: #ffc107;
+    background: #0c2c1f;
     color: #fffbf6;
     border-radius: 50%;
     border:none;
@@ -215,6 +221,9 @@ section{
         padding: 11px 4%;
         transition: .2s;
     }
+    .home{
+        height: auto;
+    }
 }
 
 @media (max-width: 910px){
@@ -225,8 +234,8 @@ section{
 
 @media (max-width: 880px){
     :root{
-        --big-font: 3.6rem;
-        --f2-font: 2rem;
+        --big-font: 2.5rem;
+        --f2-font: 1.5rem;
         --p-font: 1rem;
     }
 
@@ -283,10 +292,4 @@ section{
     }
 }
 
-@media (max-width: 540px){
-    :root{
-        --big-font: 2.5rem;
-        --f2-font: 1.5rem;
-        --p-font: 1rem;
-    }
-}
+
