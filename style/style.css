@@ -99,6 +99,53 @@ header.sticky{
     display: none;
 }
 
+/* About Us details */
+
+.about
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 100px;
+    }
+    
+ .about-img img{   
+    width: 100%;
+    height: auto;
+    }
+    
+.about h2{
+    font-weight: bold;
+    letter-spacing: 1.1;
+    text-transform: uppercase;
+    color: #0c2c1f;
+    font-size: 35px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    }
+    
+.about p{
+    color: var(--second-color);
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    }
+
+.about .btn{
+    display: inline-block;
+    padding: 10px 30px;
+    color: #f9f9ff;
+    background-color:#0c2c1f;
+    outline: none;
+    border-radius: 30px;        
+    }
+
+.about .btn:hover{
+    transform: translateY(-4px);
+}
+
 /* Home Section */
 
 section{
@@ -407,6 +454,86 @@ section{
     border: 1px solid #ffff;
 }
 
+/* Contact us Section */
+.contact{
+    background: #0c2c1f;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 2rem;
+}
+.contact-contain h4{
+    font-size:20px;
+    margin-bottom: 1.6rem;
+    color: var(--bg-color);
+    position: relative;
+}
+.contact-contain h4::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 60px;
+    left: 0;
+    bottom: -10px;
+    background: var(--main-color);
+}
+.contact-contain h5{
+    font-size:18px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+.contact-contain li a{
+    display: block;
+    font-size:15px;
+   font-weight: 500;
+   color:  var(--main-color);
+   transition: all .45s ease;
+}
+.contact-contain li{
+    margin-bottom: 16px;
+}
+.contact-contain li a:hover{
+    transform: translateX(-8px);
+    color: var(--bg-color);
+}
+.icons{
+    display: flex;
+    margin-top: 1rem;
+}
+.icons i{
+    font-size: 25px;
+    margin-right: 1rem;
+    color:  var(--main-color);
+    transition: all .45s ease;
+}
+.icons i:hover{
+    color: var(--bg-color);
+    transform: scale(1.1) translateY(-5px);
+}
+.last-text{
+    text-align: center;
+    padding: 20px;
+    background:  #095a39;
+}
+.last-text p{
+    color: var(--bg-color);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Scroll-Top */
+.top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+.top i{
+    font-size: 22px;
+    color: var(--bg-color);
+    padding: 14px;
+    background: var(--main-color);
+    border-radius: 10px;
+}
+
 
 /* Resoponsive design */
 @media (max-width: 1290px){
@@ -490,7 +617,9 @@ section{
         left: 50%;
         transform: translate(-50%,-50%);
     }
-
+    .about{
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 910px){
