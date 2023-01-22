@@ -102,7 +102,7 @@ header.sticky{
 /* Home Section */
 
 section{
-    padding: 80px 15% 
+    padding: 80px 15%;
 }
 
 .home{
@@ -212,7 +212,8 @@ section{
 }
 
 
-/* Container Section */
+/* Tour Container Section */
+
 .container-row{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
@@ -222,7 +223,7 @@ section{
     margin-top: 2rem;
 }
 
-.text h2{
+.main-text h2{
     text-align: center;
     font-weight: 600;
     letter-spacing: 1.1;
@@ -231,7 +232,7 @@ section{
     font-size: 36px;
 }
 
-.text span{
+.main-text span{
     color: var(--main-color);
 }
 .container-box{
@@ -271,24 +272,140 @@ section{
     transform: translateY(-4px);
 }
 
+/* Package Section */
 
+.packages-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
 
+.thum{
+    position: relative;
+    transition: all .3s  cubic-bezier(.445, .05, .55, .95);
+    will-change: filter;
+    cursor: pointer;
+}
 
+.thum img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
 
+.thum h3{
+    position:absolute;
+    font-size: 30px;
+    font-weight: 600; text-align: right;
+    color: var(--bg-color);
+    top: 36px;
+    right: 40px;
+} 
 
+.dest-contain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 24px;
+}
 
+.location h1{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+    color: var(--text-color);
+}
 
+.location h4{
+    font-size: 15px;
+    color: var(--second-color);
+}
 
+.star i{
+    color: var(--main-color);
+    font-size: 20px;
+}
 
+.thum:hover{
+    filter: brightness(100%) hue-rotate(45deg);
+    transform: scale(1.04);
+}
 
+/* Newsletter Section */
 
+.newsletter{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    transition: all .45s ease;
+}
 
+.newsletter h2{
+    font-size: 45px;
+    margin-bottom: 5px;
+}
 
+.newsletter p{
+    text-transform: capitalize;
+    font-size: var(--p-font);
+    color: var(--text-color);
+}
 
+.newsletter form{
+    max-width: 100%;
+    width: 450px;
+    position: relative;
+}
 
+.newsletter form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding: 20px  150px 20px 30px; 
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+.newsletter form input:last-child{
+    display: inline-block;
+    position: absolute;
+    outline: none;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 15px;
+    font-weight: 600;
+    background: #0c2c1f;
+    color: var(--bg-color);
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+}
 
+.newsletter form input:last-child:hover{
+    transform: scale(1.01);
+    background: #ffc107;
+}
 
-
+/* Scroll-Top */
+.scroll-top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+.scroll-top i{
+    font-size: 22px;
+    color: var(--bg-color);
+    padding: 14px;
+    background: #0c2c1f;
+    border-radius: 50%;
+    border: 1px solid #ffff;
+}
 
 
 /* Resoponsive design */
@@ -305,13 +422,14 @@ section{
         height: auto;
     }
     header.sticky{
-        padding: 10px 9%;
+        padding: 8px 2%;
+        transition: .2s;
     }
 }
 
-@media (max-width: 910px){
-    .search-bar{
-        width: 90%;
+@media (max-width: 570px){
+    .newsletter form{
+        width: 300px;
     }
 }
 
@@ -372,6 +490,12 @@ section{
         left: 50%;
         transform: translate(-50%,-50%);
     }
+
 }
 
+@media (max-width: 910px){
+    .search-bar{
+        width: 90%;
+    }
+}
 
