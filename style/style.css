@@ -211,6 +211,86 @@ section{
     font-weight: 600;
 }
 
+
+/* Container Section */
+.container-row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.text h2{
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1.1;
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-size: 36px;
+}
+
+.text span{
+    color: var(--main-color);
+}
+.container-box{
+    background: var(--bg-color);
+    box-shadow: 0px 5px 40px  rgb(19 8 73 / 13%);
+    padding: 50px 10px;
+    border-radius: 4px;
+    transition: all 1s ease 0s;
+    cursor: pointer;
+}
+
+.container-img img{
+    width: 85px;
+    width: 85px;
+    padding: 15px;
+    background: #0c2c1f;
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 50%;
+    margin-bottom: 15px;
+    height: auto;
+}
+
+.container-box h4{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.container-box p{
+    font-size: 15px;
+    color: var(--second-color);
+}
+
+.container-box:hover{
+    transform: translateY(-4px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Resoponsive design */
 @media (max-width: 1290px){
     section{
