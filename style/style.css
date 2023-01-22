@@ -502,11 +502,11 @@ section{
 .icons i{
     font-size: 25px;
     margin-right: 1rem;
-    color:  var(--main-color);
+    color:  var(--bg-color);
     transition: all .45s ease;
 }
 .icons i:hover{
-    color: var(--bg-color);
+    color: var(--main-color);
     transform: scale(1.1) translateY(-5px);
 }
 .last-text{
